@@ -225,3 +225,11 @@ input[type=submit]:hover {
   font-size: 1rem;
   cursor: pointer;
 }
+/* Här börjar style för About-sidan
+*/
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
