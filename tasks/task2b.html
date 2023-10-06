@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+        <script>
+             //Skapar en funktion som får fram ett random tal
+            function getRandomInt(max){
+                return Math.floor(Math.random() * max);
+            }
+            // kallar funktionen och sparar resultatet från return i funktionen i variablen
+            let randomNumber = getRandomInt(11);
+            // skriver ut numret
+            console.log(randomNumber);
+             // kollar om talet som genereras är jämnt eller ojämnt.
+            if(randomNumber % 2 === 0){
+                console.log("Jämnt nummer")
+            } else {
+                console.log("Ej jämnt nummer")
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
