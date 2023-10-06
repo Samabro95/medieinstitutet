@@ -3,7 +3,19 @@
         
         <script>
             // skapa en funktion som delar upp en sträng i varje tecken
+            function reverseString(originalString){
+                // splitta strängen till respektive tecken och stoppa i en array
+                let returnString = '';
+                let characters = originalString.split('');
+                for(let i = characters.length-1; i >= 0; i--){
+                    returnString += characters[i];
+                }
 
+                return returnString;
+            }
+            
+            let name = "Samuel"
+            console.log(reverseString(name));
             // skapa en variabel som håller en sträng
 
             // skriva ut resultatet

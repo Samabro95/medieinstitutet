@@ -1,0 +1,30 @@
+<html>
+    <head>
+        
+        <script>
+           function clickFunction(){
+            // hämtar våran p-tagg
+            let ourText = document.querySelector("p");
+            // hämtar vår div
+            let ourDiv = document.querySelector("#color-changer");
+
+            // ändra färgen i div
+            ourDiv.style.backgroundColor = "green";
+            //ändra text på ourText
+            ourText.innerText = "Jag har ändrats";
+           }
+        </script>
+      <style>
+         div {
+            width:100px;
+            height: 100px;
+            background-color: red;
+         }
+      </style>
+    </head>
+    <body>
+        <p>Här är en text</p>
+        <button onclick="clickFunction()">Klicka här</button>
+        <div id="color-changer"></div>
+    </body>
+</html>
