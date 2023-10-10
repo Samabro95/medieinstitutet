@@ -1,0 +1,44 @@
+button {
+    background-color: white;
+    padding:5px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color:white;
+}
+img {
+    display: block;
+    margin: 20px;
+}
+
+div {
+    border: 1px solid black;
+    padding: 20px;
+    width: 150px;
+    margin:10px;
+    min-height: 300px;
+    float:left;
+}
+
+@media only screen and (max-width: 600px){
+    html {
+        background-color: red;
+    }
+    div {
+        width: 80%;
+    }
+    img {
+        margin:0 auto;
+        width:250px ;
+    }
+    button {
+        margin-bottom: 3vh;
+        font-size: 12px;
+    }
+
+}
