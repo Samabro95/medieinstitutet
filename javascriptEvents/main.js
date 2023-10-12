@@ -45,22 +45,28 @@
                 alt:"",
                 getSrc: function(){
                   return this.src;
-               }
+               },
+               headlineText: "Gullig apfamilj",
+               descriptionText:"en familj av apor"
              },
              {
                src:"img2.jpg",
                alt:"",
                getSrc: function(){
                  return this.src;
-              }
+              },
+              headlineText: "Två lurviga jävlar",
+              descriptionText:"två gosiga lemurer kanske?"
             },
             {
                src:"img3.jpg",
                alt:"",
                getSrc: function(){
                  return this.src;
-              }
-            }
+              },
+              headlineText: "Lejonface",
+              descriptionText:"ett lejonansikte"
+            },
             
            ];
           
@@ -73,6 +79,15 @@
           kitten.src = choosenImage.getSrc();
           kitten.alt = choosenImage.alt; 
           
+          // Skapa en variable för H1 och p
+
+          const headline = document.getElementById("headline");
+          const description = document.getElementById("description");
+
+          // Sätta texten till den valda objectets headline och description
+
+          headline.innerText = choosenImage.headlineText;
+          description.innerText = choosenImage.descriptionText;
          
        }
        
