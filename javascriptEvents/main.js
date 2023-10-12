@@ -129,7 +129,6 @@
          const bodyElement = document.querySelector("body");
          bodyElement.style.backgroundImage = choosenImage.getSrcAsBackground();
          bodyElement.style.backgroundRepeat = "no-repeat";
-         bodyElement.style.backgroundCover = ""
       }
 
        const timer = setInterval(showHideImage, 1000);
