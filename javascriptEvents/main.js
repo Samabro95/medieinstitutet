@@ -47,7 +47,16 @@
                   return this.src;
                },
                headlineText: "Gullig apfamilj",
-               descriptionText:"en familj av apor"
+               descriptionText:"en familj av apor",
+               button: {
+                  backgroundColor: "orange"
+               },
+               container: {
+                  border: "3px solid red"
+               },
+               getSrcAsBackground: function(){
+                  return "url(" + this.src + ")"
+               }
              },
              {
                src:"img2.jpg",
@@ -56,7 +65,16 @@
                  return this.src;
               },
               headlineText: "Två lurviga jävlar",
-              descriptionText:"två gosiga lemurer kanske?"
+              descriptionText:"två gosiga lemurer kanske?",
+              button: {
+               backgroundColor: "blue"
+            }, 
+            container: {
+               border: "3px solid orange"
+            },
+            getSrcAsBackground: function(){
+               return "url(" + this.src + ")"
+            }
             },
             {
                src:"img3.jpg",
@@ -65,7 +83,16 @@
                  return this.src;
               },
               headlineText: "Lejonface",
-              descriptionText:"ett lejonansikte"
+              descriptionText:"ett lejonansikte",
+              button: {
+               backgroundColor: "pink"
+            },
+            container: {
+               border: "3px solid yellow"
+            },
+            getSrcAsBackground: function(){
+               return "url(" + this.src + ")"
+            }
             },
             
            ];
@@ -88,8 +115,29 @@
 
           headline.innerText = choosenImage.headlineText;
           description.innerText = choosenImage.descriptionText;
+
+          const allButtons = document.querySelectorAll("button");
+          //Loopa genom alla buttons och sätt bakgrundsfärgen till choosenImage.
+          //button.backgroundColor
+         allButtons.forEach(function(button){
+            button.style.backgroundColor = choosenImage.button.backgroundColor;
+
+         });
+
+         document.querySelector("div").style.border = choosenImage.container.border;
          
+         const bodyElement = document.querySelector("body");
+         bodyElement.style.backgroundImage = choosenImage.getSrcAsBackground();
+         bodyElement.style.backgroundRepeat = "no-repeat";
+         bodyElement.style.backgroundCover = ""
+      }
+
+       const timer = setInterval(showHideImage, 1000);
+       function stopTimer(){
+           clearInterval(timer);
        }
+      
+      document.querySelector("#headline").addEventListener("click", stopTimer);
        
        // Koppla en eventListener till varje button
        hideButton1.addEventListener("click", showHideImage);
