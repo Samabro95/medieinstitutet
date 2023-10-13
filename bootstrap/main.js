@@ -35,7 +35,7 @@ function showSidebBar(event){
     const asideDescription = document.querySelector("aside > p");
     const currentAnimal = zoo[animalPosition];
 
-    asideHeadline.innerText = currentAnimal.species;
+    asideHeadline.innerText = currentAnimal.species;    
     asideDescription.innerText = currentAnimal.longDescription;
 
 }
